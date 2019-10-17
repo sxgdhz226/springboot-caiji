@@ -1,0 +1,110 @@
+2019-10-14 15:25:12.339 INFO  net.cn.ssd.ApplicationTests Line:50  - Starting ApplicationTests on sxgdhz with PID 12284 (started by Administrator in D:\workspace\idea\svn\spring-boot-dabucaiji)
+2019-10-14 15:25:12.345 INFO  net.cn.ssd.ApplicationTests Line:652 - No active profile set, falling back to default profiles: default
+2019-10-14 15:25:12.496 INFO  org.springframework.web.context.support.GenericWebApplicationContext Line:589 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@34b9f960: startup date [Mon Oct 14 15:25:12 CST 2019]; root of context hierarchy
+2019-10-14 15:25:12.931 INFO  org.springframework.context.annotation.ConfigurationClassParser Line:452 - Properties location [classpath:jdbc.properties] not resolvable: class path resource [jdbc.properties] cannot be opened because it does not exist
+2019-10-14 15:25:14.702 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e37dd37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-14 15:25:15.256 INFO  com.zaxxer.hikari.HikariDataSource Line:103 - HikariCP pool HikariPool-0 is starting.
+2019-10-14 15:25:16.637 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:361 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-10-14 15:25:16.667 INFO  org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-14 15:25:16.843 INFO  org.hibernate.Version Line:45  - HHH000412: Hibernate Core {5.2.14.Final}
+2019-10-14 15:25:16.848 INFO  org.hibernate.cfg.Environment Line:213 - HHH000206: hibernate.properties not found
+2019-10-14 15:25:16.971 INFO  org.hibernate.annotations.common.Version Line:66  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-10-14 15:25:17.234 INFO  org.hibernate.dialect.Dialect Line:157 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2019-10-14 15:25:21.493 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:394 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-14 15:25:23.205 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:567 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@34b9f960: startup date [Mon Oct 14 15:25:12 CST 2019]; root of context hierarchy
+2019-10-14 15:25:23.478 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/FreeMarkerController]}" onto public java.lang.String net.cn.ssd.freemarker.FreeMarkerController.index(java.util.Map<java.lang.String, java.lang.Object>)
+2019-10-14 15:25:23.486 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/index]}" onto public java.lang.String net.cn.ssd.UserController.index()
+2019-10-14 15:25:23.491 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/findByPage],methods=[GET]}" onto public net.cn.ssd.framework.common.pojo.EasyUiDataGridResult net.cn.ssd.UserController.findByPage()
+2019-10-14 15:25:23.498 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-14 15:25:23.500 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-14 15:25:23.571 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 15:25:23.573 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 15:25:23.601 INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:289 - Detected @ExceptionHandler methods in globalExceptionHandler
+2019-10-14 15:25:23.645 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 15:25:24.080 INFO  org.springframework.ui.freemarker.SpringTemplateLoader Line:62  - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.web.context.support.GenericWebApplicationContext@34b9f960: startup date [Mon Oct 14 15:25:12 CST 2019]; root of context hierarchy] and template loader path [classpath:/templates/]
+2019-10-14 15:25:24.083 INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer Line:131 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-10-14 15:25:24.276 INFO  org.quartz.impl.StdSchedulerFactory Line:1208 - Using default implementation for ThreadExecutor
+2019-10-14 15:25:24.331 INFO  org.quartz.core.SchedulerSignalerImpl Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-10-14 15:25:24.333 INFO  org.quartz.core.QuartzScheduler Line:229 - Quartz Scheduler v.2.3.0 created.
+2019-10-14 15:25:24.336 INFO  org.quartz.simpl.RAMJobStore Line:155 - RAMJobStore initialized.
+2019-10-14 15:25:24.338 INFO  org.quartz.core.QuartzScheduler Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-10-14 15:25:24.353 INFO  org.quartz.impl.StdSchedulerFactory Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-10-14 15:25:24.353 INFO  org.quartz.impl.StdSchedulerFactory Line:1366 - Quartz scheduler version: 2.3.0
+2019-10-14 15:25:24.355 INFO  org.quartz.core.QuartzScheduler Line:2287 - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@22f02996
+2019-10-14 15:25:24.646 INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:351 - Starting beans in phase 2147483647
+2019-10-14 15:25:24.647 INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean Line:686 - Starting Quartz Scheduler now
+2019-10-14 15:25:24.648 INFO  org.quartz.core.QuartzScheduler Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-10-14 15:25:24.670 INFO  net.cn.ssd.ApplicationTests Line:59  - Started ApplicationTests in 13.176 seconds (JVM running for 20.679)
+2019-10-14 15:25:25.036 INFO  org.springframework.web.context.support.GenericWebApplicationContext Line:989 - Closing org.springframework.web.context.support.GenericWebApplicationContext@34b9f960: startup date [Mon Oct 14 15:25:12 CST 2019]; root of context hierarchy
+2019-10-14 15:25:25.041 INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:366 - Stopping beans in phase 2147483647
+2019-10-14 15:25:25.042 INFO  org.quartz.core.QuartzScheduler Line:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-10-14 15:25:25.043 INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean Line:810 - Shutting down Quartz Scheduler
+2019-10-14 15:25:25.045 INFO  org.quartz.core.QuartzScheduler Line:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-10-14 15:25:25.045 INFO  org.quartz.core.QuartzScheduler Line:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-10-14 15:25:25.047 INFO  org.quartz.core.QuartzScheduler Line:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-10-14 15:25:25.049 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:572 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-14 15:25:25.051 INFO  com.zaxxer.hikari.pool.HikariPool Line:265 - HikariCP pool HikariPool-0 is shutting down.
+2019-10-14 19:03:11.521 INFO  net.cn.ssd.ApplicationTests Line:50  - Starting ApplicationTests on sxgdhz with PID 13652 (started by Administrator in D:\workspace\idea\svn\spring-boot-dabucaiji)
+2019-10-14 19:03:11.576 INFO  net.cn.ssd.ApplicationTests Line:652 - No active profile set, falling back to default profiles: default
+2019-10-14 19:03:11.694 INFO  org.springframework.web.context.support.GenericWebApplicationContext Line:589 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Oct 14 19:03:11 CST 2019]; root of context hierarchy
+2019-10-14 19:03:11.946 INFO  org.springframework.context.annotation.ConfigurationClassParser Line:452 - Properties location [classpath:jdbc.properties] not resolvable: class path resource [jdbc.properties] cannot be opened because it does not exist
+2019-10-14 19:03:13.810 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da6fe334] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-14 19:03:14.324 INFO  com.zaxxer.hikari.HikariDataSource Line:103 - HikariCP pool HikariPool-0 is starting.
+2019-10-14 19:03:16.564 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:361 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-10-14 19:03:16.597 INFO  org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-14 19:03:17.310 INFO  org.hibernate.Version Line:45  - HHH000412: Hibernate Core {5.2.14.Final}
+2019-10-14 19:03:17.312 INFO  org.hibernate.cfg.Environment Line:213 - HHH000206: hibernate.properties not found
+2019-10-14 19:03:17.387 INFO  org.hibernate.annotations.common.Version Line:66  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-10-14 19:03:17.626 INFO  org.hibernate.dialect.Dialect Line:157 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2019-10-14 19:03:20.276 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:394 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-14 19:03:21.693 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Line:567 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Oct 14 19:03:11 CST 2019]; root of context hierarchy
+2019-10-14 19:03:21.923 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/FreeMarkerController]}" onto public java.lang.String net.cn.ssd.freemarker.FreeMarkerController.index(java.util.Map<java.lang.String, java.lang.Object>)
+2019-10-14 19:03:21.928 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/index]}" onto public java.lang.String net.cn.ssd.UserController.index()
+2019-10-14 19:03:21.930 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/findByPage],methods=[GET]}" onto public net.cn.ssd.framework.common.pojo.EasyUiDataGridResult net.cn.ssd.UserController.findByPage()
+2019-10-14 19:03:21.936 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-14 19:03:21.938 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Line:548 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-14 19:03:22.019 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 19:03:22.020 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 19:03:22.050 INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:289 - Detected @ExceptionHandler methods in globalExceptionHandler
+2019-10-14 19:03:22.097 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Line:373 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-14 19:03:22.539 INFO  org.springframework.ui.freemarker.SpringTemplateLoader Line:62  - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Oct 14 19:03:11 CST 2019]; root of context hierarchy] and template loader path [classpath:/templates/]
+2019-10-14 19:03:22.542 INFO  org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer Line:131 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-10-14 19:03:22.723 INFO  org.quartz.impl.StdSchedulerFactory Line:1208 - Using default implementation for ThreadExecutor
+2019-10-14 19:03:22.759 INFO  org.quartz.core.SchedulerSignalerImpl Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-10-14 19:03:22.760 INFO  org.quartz.core.QuartzScheduler Line:229 - Quartz Scheduler v.2.3.0 created.
+2019-10-14 19:03:22.762 INFO  org.quartz.simpl.RAMJobStore Line:155 - RAMJobStore initialized.
+2019-10-14 19:03:22.765 INFO  org.quartz.core.QuartzScheduler Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-10-14 19:03:22.766 INFO  org.quartz.impl.StdSchedulerFactory Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-10-14 19:03:22.767 INFO  org.quartz.impl.StdSchedulerFactory Line:1366 - Quartz scheduler version: 2.3.0
+2019-10-14 19:03:22.767 INFO  org.quartz.core.QuartzScheduler Line:2287 - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@5438fa43
+2019-10-14 19:03:22.940 INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:351 - Starting beans in phase 2147483647
+2019-10-14 19:03:22.941 INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean Line:686 - Starting Quartz Scheduler now
+2019-10-14 19:03:22.942 INFO  org.quartz.core.QuartzScheduler Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-10-14 19:03:22.952 INFO  net.cn.ssd.ApplicationTests Line:59  - Started ApplicationTests in 12.154 seconds (JVM running for 13.55)
+2019-10-14 19:03:23.209 INFO  org.springframework.web.context.support.GenericWebApplicationContext Line:989 - Closing org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Oct 14 19:03:11 CST 2019]; root of context hierarchy
+2019-10-14 19:03:23.215 INFO  org.springframework.context.support.DefaultLifecycleProcessor Line:366 - Stopping beans in phase 2147483647
+2019-10-14 19:03:23.217 INFO  org.quartz.core.QuartzScheduler Line:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-10-14 19:03:23.222 INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean Line:810 - Shutting down Quartz Scheduler
+2019-10-14 19:03:23.223 INFO  org.quartz.core.QuartzScheduler Line:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-10-14 19:03:23.224 INFO  org.quartz.core.QuartzScheduler Line:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-10-14 19:03:23.225 INFO  org.quartz.core.QuartzScheduler Line:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-10-14 19:03:23.228 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:572 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-14 19:03:23.230 INFO  com.zaxxer.hikari.pool.HikariPool Line:265 - HikariCP pool HikariPool-0 is shutting down.

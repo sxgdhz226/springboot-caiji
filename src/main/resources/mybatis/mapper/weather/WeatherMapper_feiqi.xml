@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.cn.ssd.mapper.WeatherDao">
+
+    <select id="queryG1657Weather" resultType="java.util.Map">
+        <![CDATA[
+        SELECT
+        TOP 1 '【桃源镇天气实况】,
+        '+
+        DATENAME(YEAR,GETDATE())+'年'
+        +Right(100+DATENAME(MONTH,GETDATE()),2)+'月'
+        +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+        +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+        +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+',
+        气温：'+
+        temp+'摄氏度'+',
+        风向：'+
+        (SELECT
+        TOP 1 (
+        CASE
+        WHEN WindD >= 0
+        AND WindD < 22 THEN
+        '北风'
+        WHEN WindD >= 22
+        AND WindD < 67 THEN
+        '东北风'
+        WHEN WindD >= 67
+        AND WindD < 112 THEN
+        '东风'
+        WHEN WindD >= 112
+        AND WindD < 157 THEN
+        '东南风'
+        WHEN WindD >= 157
+        AND WindD < 202 THEN
+        '南风'
+        WHEN WindD >= 202
+        AND WindD < 247 THEN
+        '西南风'
+        WHEN WindD >= 247
+        AND WindD < 292 THEN
+        '西风'
+        WHEN WindD >= 292
+        AND WindD < 337 THEN
+        '西北风'
+        WHEN WindD >= 337
+        AND WindD < 360 THEN
+        '北风'
+        END
+        ) AS Expr1
+        FROM
+        [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G1657' order by id desc)+
+        (select  TOP 1
+        '
+        ,风速：'+ WindV +'m/s'
+        from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G1657' order by id desc  )+
+        (SELECT TOP 1 '
+        ,小时降雨量：'+ RianAmount +'mm'
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G1657' order by id desc  ) AS result
+
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G1657' order by id desc
+        ]]>
+    </select>
+
+    <select id="queryG5026Weather" resultType="java.util.Map">
+        <![CDATA[
+        SELECT
+        TOP 1 '【瑞山天气实况】,
+        '+
+        DATENAME(YEAR,GETDATE())+'年'
+        +DATENAME(MONTH,GETDATE())+'月'
+        +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+        +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+        +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+        ,气温：'+
+        temp+'摄氏度'+'
+        ,风向：'+
+        (SELECT
+        TOP 1 (
+        CASE
+        WHEN WindD >= 0
+        AND WindD < 22 THEN
+        '北风'
+        WHEN WindD >= 22
+        AND WindD < 67 THEN
+        '东北风'
+        WHEN WindD >= 67
+        AND WindD < 112 THEN
+        '东风'
+        WHEN WindD >= 112
+        AND WindD < 157 THEN
+        '东南风'
+        WHEN WindD >= 157
+        AND WindD < 202 THEN
+        '南风'
+        WHEN WindD >= 202
+        AND WindD < 247 THEN
+        '西南风'
+        WHEN WindD >= 247
+        AND WindD < 292 THEN
+        '西风'
+        WHEN WindD >= 292
+        AND WindD < 337 THEN
+        '西北风'
+        WHEN WindD >= 337
+        AND WindD < 360 THEN
+        '北风'
+        END
+        ) AS Expr1
+        FROM
+        [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5026' order by id desc)+
+        (select  TOP 1
+        '
+        ,风速：'+ WindV +'m/s'
+        from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5026' order by id desc  )+
+        (SELECT TOP 1 '
+        ,小时降雨量：'+ RianAmount +'mm'
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5026' order by id desc  ) AS result
+
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5026' order by id desc
+        ]]>
+    </select>
+    <select id="queryG5050Weather" resultType="java.util.Map">
+        <![CDATA[
+        SELECT
+        TOP 1 '【青溪镇天气实况】,
+        '+
+        DATENAME(YEAR,GETDATE())+'年'
+        +DATENAME(MONTH,GETDATE())+'月'
+        +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+        +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+        +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+        ,气温：'+
+        temp+'摄氏度'+'
+        ,风向：'+
+        (SELECT
+        TOP 1 (
+        CASE
+        WHEN WindD >= 0
+        AND WindD < 22 THEN
+        '北风'
+        WHEN WindD >= 22
+        AND WindD < 67 THEN
+        '东北风'
+        WHEN WindD >= 67
+        AND WindD < 112 THEN
+        '东风'
+        WHEN WindD >= 112
+        AND WindD < 157 THEN
+        '东南风'
+        WHEN WindD >= 157
+        AND WindD < 202 THEN
+        '南风'
+        WHEN WindD >= 202
+        AND WindD < 247 THEN
+        '西南风'
+        WHEN WindD >= 247
+        AND WindD < 292 THEN
+        '西风'
+        WHEN WindD >= 292
+        AND WindD < 337 THEN
+        '西北风'
+        WHEN WindD >= 337
+        AND WindD < 360 THEN
+        '北风'
+        END
+        ) AS Expr1
+        FROM
+        [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5050' order by id desc)+
+        (select  TOP 1
+        '
+        ,风速：'+ WindV +'m/s'
+        from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5050' order by id desc  )+
+        (SELECT TOP 1 '
+        ,小时降雨量：'+ RianAmount +'mm'
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5050' order by id desc  ) AS result
+
+        FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+        where StationNum ='G5050' order by id desc
+        ]]>
+    </select>
+
+    <select id="queryG1654Weather" resultType="java.util.Map">
+        <![CDATA[
+        SELECT
+				TOP 1 '【茶阳镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1654' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1654' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1654' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1654' order by id desc
+        ]]>
+    </select>
+
+    <select id="queryG1658Weather" resultType="java.util.Map">
+        <![CDATA[
+       SELECT
+				TOP 1 '【西河镇(新天泽)天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1658' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1658' order by id desc  )+
+  (SELECT TOP 1 '
+ ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1658' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1658' order by id desc
+        ]]>
+    </select>
+
+    <select id="queryG1656Weather" resultType="java.util.Map">
+        <![CDATA[
+        SELECT
+				TOP 1 '【丰溪林场天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1656' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1656' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1656' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1656' order by id desc
+        ]]>
+    </select>
+    <select id="query59116Weather" resultType="java.util.Map">
+        <![CDATA[
+            SELECT
+				TOP 1 '【大埔天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='59116' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc  )+
+
+  (SELECT top 1 ',气压：'+substring(Press,0,4)+'hPa'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc)+
+  (SELECT TOP 1 '
+  ,湿度：'+ RelHum +'%'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc) +
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc
+        ]]>
+    </select>
+    <select id="query59116towWeather" resultType="java.util.Map">
+        <![CDATA[
+            SELECT
+				TOP 1 '【湖寮镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='59116' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc  )+
+
+  (SELECT top 1 ',气压：'+substring(Press,0,4)+'百帕'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc)+
+  (SELECT TOP 1 '
+  ,湿度：'+ RelHum +'%'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc) +
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='59116' order by id desc
+        ]]>
+    </select>
+    <select id="queryG5054Weather" resultType="java.util.Map">
+        <![CDATA[
+          SELECT
+				TOP 1 '【百候镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G5054' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5054' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5054' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5054' order by id desc
+        ]]>
+    </select>
+    <select id="queryG5051Weather" resultType="java.util.Map">
+        <![CDATA[
+SELECT
+				TOP 1 '【枫朗镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G5051' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5051' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5051' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5051' order by id desc
+        ]]>
+    </select>
+    <select id="queryG5055Weather" resultType="java.util.Map">
+        <![CDATA[
+SELECT
+				TOP 1 '【大东镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G5055' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5055' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5055' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5055' order by id desc
+        ]]>
+    </select>
+    <select id="queryG1653Weather" resultType="java.util.Map">
+        <![CDATA[
+SELECT
+				TOP 1 '【高陂水利枢纽天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1653' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1653' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1653' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1653' order by id desc
+        ]]>
+    </select>
+    <select id="queryG1655Weather" resultType="java.util.Map">
+        <![CDATA[
+          SELECT
+				TOP 1 '【银江镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1655' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1655' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1655' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1655' order by id desc
+        ]]>
+    </select>
+    <select id="queryG5053Weather" resultType="java.util.Map">
+        <![CDATA[
+SELECT
+				TOP 1 '【大麻镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G5053' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5053' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5053' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G5053' order by id desc
+        ]]>
+    </select>
+    <select id="queryG1651Weather" resultType="java.util.Map">
+        <![CDATA[
+SELECT
+				TOP 1 '【三河镇天气实况】,
+				'+
+				 DATENAME(YEAR,GETDATE())+'年'
+				 +DATENAME(MONTH,GETDATE())+'月'
+				 +Right(100+DATENAME(DAY,GETDATE()),2)+'日'
+				 +Right(100+DATENAME(HOUR,GETDATE()),2)+'时'
+				 +Right(100+DATENAME(MINUTE,GETDATE()),2)+'分'+'
+				 ,气温：'+
+	temp+'摄氏度'+'
+	,风向：'+
+	(SELECT
+				TOP 1 (
+					CASE
+					WHEN WindD >= 0
+					AND WindD < 22 THEN
+						'北风'
+					WHEN WindD >= 22
+					AND WindD < 67 THEN
+						'东北风'
+					WHEN WindD >= 67
+					AND WindD < 112 THEN
+						'东风'
+					WHEN WindD >= 112
+					AND WindD < 157 THEN
+						'东南风'
+					WHEN WindD >= 157
+					AND WindD < 202 THEN
+						'南风'
+					WHEN WindD >= 202
+					AND WindD < 247 THEN
+						'西南风'
+					WHEN WindD >= 247
+					AND WindD < 292 THEN
+						'西风'
+					WHEN WindD >= 292
+					AND WindD < 337 THEN
+						'西北风'
+					WHEN WindD >= 337
+					AND WindD < 360 THEN
+						'北风'
+					END
+				) AS Expr1
+			FROM
+				[DBSSDWeather].[dbo].[Ssd_AWS_Data]
+		where StationNum ='G1651' order by id desc)+
+		(select  TOP 1
+			'
+			,风速：'+ WindV +'m/s'
+			from [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1651' order by id desc  )+
+  (SELECT TOP 1 '
+  ,小时降雨量：'+ RianAmount +'mm'
+  FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1651' order by id desc  ) AS result
+
+	FROM [DBSSDWeather].[dbo].[Ssd_AWS_Data]
+  where StationNum ='G1651' order by id desc
+        ]]>
+    </select>
+</mapper>
